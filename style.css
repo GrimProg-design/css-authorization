@@ -1,0 +1,104 @@
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.form {
+  width: 300px;
+  height: 300px;
+  background: rgb(255, 255, 255);
+  border-radius: 20px;
+  cursor: pointer;
+  padding: 10px;
+  box-shadow: 5px 5px 25px rgb(219, 219, 219), -5px -5px 25px rgb(219, 219, 219);
+}
+
+div {
+  margin-bottom: 20px;
+}
+
+label {
+  display: block;
+  margin-bottom: 10px;
+}
+
+input {
+  width: calc(100% - 10px);
+  height: 30px;
+  border: 1px solid silver;
+  border-radius: 20px;
+  padding-left: 10px;
+  outline: none;
+}
+
+h2 {
+  text-align: center;
+}
+
+.form button:last-of-type {
+  all: unset;
+  display: block;
+  text-align: center;
+  margin: 0 auto;
+  border: 1px solid silver;
+  border-radius: 10px;
+  width: 80px;
+  height: 30px;
+  background-color: white;
+  transition-property: background-color, border;
+  transition-duration: 0.2s, 0.2s;
+  transition-timing-function: linear;
+}
+
+.form button:last-of-type:hover {
+    background-color: rgb(235, 255, 209);
+    border: 1px solid black;
+}
+
+.form button:last-of-type:focus {
+    background-color: rgb(90, 89, 89);
+    animation-fill-mode: forwards;
+}
+
+.animate {
+  animation: pulse 0.4s;
+}
+
+.on-input {
+  text-align: center;
+  animation: move 0.4s forwards;
+  background-color: white;
+  display: inline-block;
+  width: 150px;
+  font-size: 15px;
+  color: silver;
+  border-radius: 20px;
+}
+
+@keyframes pulse {
+  0% {
+    transform: translateX(0px);
+  }
+  30% {
+    transform: translateX(30px);
+  }
+  60% {
+    transform: translateX(-30px);
+  }
+  100% {
+    transform: translateX(0px);
+  }
+}
+
+
+@keyframes move {
+  0% {
+    transform: translate(0px, 0px)
+    
+  }
+  100% {
+    transform: translate(20px, 20px)
+  }
+}
